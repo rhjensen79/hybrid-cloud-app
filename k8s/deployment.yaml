@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: hc-app-deployment
   namespace: hc-app
   labels:
     app: hc-app
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hc-app
-        image: nginx
+        image: ghcr.io/rhjensen79/hybrid-cloud-app:main
         ports:
-        - containerPort: 80
+        - containerPort: 8000
 
