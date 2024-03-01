@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hc-app-onprem
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/rhjensen79/hybrid-cloud-app.git'
+    targetRevision: dev
+    path: k8s
+  destination:
+    server: https://kubernetes.default.svc
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
