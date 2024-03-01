@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hc-app
-        image: ghcr.io/rhjensen79/hybrid-cloud-app:main
+        image: ghcr.io/rhjensen79/hybrid-cloud-app:latest
         ports:
         - containerPort: 8000
 
