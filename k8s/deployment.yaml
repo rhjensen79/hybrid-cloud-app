@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+  namespace: hc-app
+  labels:
+    app: hc-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hc-app
+  template:
+    metadata:
+      labels:
+        app: hc-app
+    spec:
+      containers:
+      - name: hc-app
+        image: nginx
+        ports:
+        - containerPort: 80
+
