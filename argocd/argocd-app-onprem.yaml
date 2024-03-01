@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hc-app-onprem
+  name: hybrid-cloud-app-onprem
   namespace: argocd
 spec:
   project: default
