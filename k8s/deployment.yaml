@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hc-app
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: hc-app
